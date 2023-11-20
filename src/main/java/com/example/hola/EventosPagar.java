@@ -46,6 +46,6 @@ public class EventosPagar{
         window.show();
     }
     public void mBtnTerminarRenta(ActionEvent event) throws IOException{
-        //Verificar pago y guardar renta en mBtnTerminarRenta
+        // TODO: Verificar pago y guardar renta en mBtnTerminarRenta
     }
 }
