@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="289.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hola.EventosPagar">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label fx:id="lblMomentoPagar" layoutX="55.0" layoutY="14.0" text="MOMENTO DE PAGAR :)" />
+      <Label fx:id="lblSaldoAPagar" layoutX="14.0" layoutY="38.0" text="Saldo a pagar:" />
+      <Label fx:id="lblSaldoPorPagar" layoutX="14.0" layoutY="70.0" text="Saldo por pagar:" />
+      <Label fx:id="lblIngresarMoneda" layoutX="14.0" layoutY="101.0" text="Ingresar moneda:" />
+      <TextField fx:id="txtFieldMoneda" layoutX="120.0" layoutY="97.0" prefHeight="25.0" prefWidth="54.0" />
+      <Label fx:id="txtMonedaValidada" layoutX="14.0" layoutY="129.0" prefHeight="17.0" prefWidth="25.0" />
+      <Label fx:id="txtSaldoAPagar" layoutX="120.0" layoutY="38.0" />
+      <Label fx:id="txtSaldoPorPagar" layoutX="120.0" layoutY="70.0" />
+      <Button fx:id="btnTerminarRenta" layoutX="15.0" layoutY="175.0" mnemonicParsing="false" onAction="#mBtnTerminarRenta" text="Terminar y guardar renta" />
+      <Label fx:id="lblResumen" layoutX="269.0" layoutY="14.0" text="RESUMEN" />
+      <Label fx:id="lblUsuarioResumen" layoutX="232.0" layoutY="38.0" text="Usuario:" />
+      <Label fx:id="lblCarroResumen" layoutX="232.0" layoutY="70.0" text="Carro:" />
+      <Label fx:id="lblItemsResumen" layoutX="232.0" layoutY="101.0" text="Items:" />
+      <Button fx:id="btnVolverRenta" layoutX="230.0" layoutY="212.0" mnemonicParsing="false" onAction="#mBtnVolverRenta" text="Volver a renta" />
+      <Label fx:id="txtUsuarioResumen" layoutX="282.0" layoutY="38.0" />
+      <Label fx:id="txtCarroResumen" layoutX="282.0" layoutY="70.0" />
+      <ListView fx:id="tableItems" layoutX="232.0" layoutY="122.0" prefHeight="78.0" prefWidth="205.0" />
+      <Label fx:id="txtPagoConcretado" layoutX="15.0" layoutY="216.0" prefHeight="17.0" prefWidth="54.0" />
+   </children>
+</Pane>

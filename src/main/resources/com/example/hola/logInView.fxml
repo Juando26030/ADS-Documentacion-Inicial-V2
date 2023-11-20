@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="129.0" prefWidth="240.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hola.EventosLogIn">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+  <Label fx:id="lblIngreseUsuario" layoutX="71.0" layoutY="31.0" prefHeight="17.0" prefWidth="104.0" text="Ingrese su usuario:" />
+  <Button fx:id="btnLogIn" layoutX="100.0" layoutY="94.0" onAction="#mBtnLogIn" text="Log in" />
+   <Label fx:id="lblUsuario" layoutX="36.0" layoutY="64.0" text="Usuario:" />
+   <TextField fx:id="txtFieldUsuario" layoutX="87.0" layoutY="60.0" prefHeight="25.0" prefWidth="117.0" />
+   <Label fx:id="lblIniciarSesion" layoutX="74.0" layoutY="6.0" prefHeight="17.0" prefWidth="98.0" text="INICIAR SESIÓN" />
+</Pane>

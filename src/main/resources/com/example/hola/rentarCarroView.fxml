@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="166.0" prefWidth="244.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hola.EventosRentarCarro">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label fx:id="lblElejirCarro" layoutX="43.0" layoutY="51.0" text="Elija el carro que quiere rentar:" />
+      <ComboBox fx:id="cmbBoxCarros" layoutX="49.0" layoutY="86.0" prefWidth="150.0" />
+      <Button fx:id="btnServicios" layoutX="46.0" layoutY="127.0" mnemonicParsing="false" onAction="#mBtnServicios" text="Servicios+" />
+      <Label fx:id="lblRentarCarro" layoutX="81.0" layoutY="15.0" text="RENTAR CARRO" />
+      <Button fx:id="btnPagar" layoutX="137.0" layoutY="127.0" mnemonicParsing="false" onAction="#mBtnPagar" text="Ir a pagar" />
+   </children>
+</Pane>
