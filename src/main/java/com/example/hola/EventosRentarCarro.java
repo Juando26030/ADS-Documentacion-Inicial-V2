@@ -20,12 +20,12 @@ import javafx.collections.ObservableList;
 
 import java.io.IOException;
 
-import java.util.List;
 import java.util.Objects;
-import java.util.stream.IntStream;
+
 
 public class EventosRentarCarro {
     private final ObservableList<Carro> carrosObservables = FXCollections.observableArrayList();
+    final private Constantes constantes =new Constantes();
     public Button btmRefresh;
     private NegocioRentarCarro negocioRentarCarro;
     private final IntegradorFileSystem integration = new IntegradorFileSystem();
@@ -64,7 +64,7 @@ public class EventosRentarCarro {
 
     private void loadCarros(IIntegracionFileSystem integrador) {
         cmbBoxCarros.setItems(carrosObservables);
-        carrosObservables.setAll(integrador.cargarCarros("C:/Users/elice/ADS/ArchivosJson/carros.json"));
+        carrosObservables.setAll(integrador.cargarCarros(Constantes.CARROSJSON));
 
     }
     private Carro getCarroSeleccionado(){

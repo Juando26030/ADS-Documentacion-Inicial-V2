@@ -1,6 +1,7 @@
 package com.example.hola.integracion;
 
 import com.example.hola.dominio.Carro;
+import com.example.hola.dominio.Cliente;
 import com.example.hola.dominio.Servicio;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -47,9 +48,9 @@ public class IntegradorFileSystem implements IIntegracionFileSystem{
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(new File(serviciosJson));
 
-            JsonNode carrosNode = jsonNode.get("servicios");
-            if (carrosNode.isArray()) {
-                for (JsonNode carroNode : carrosNode) {
+            JsonNode serviciosNode = jsonNode.get("servicios");
+            if (serviciosNode.isArray()) {
+                for (JsonNode carroNode : serviciosNode) {
                     String nombre = carroNode.get("nombre").asText();
                     int precio = carroNode.get("precio").asInt();
 
@@ -62,5 +63,29 @@ public class IntegradorFileSystem implements IIntegracionFileSystem{
         }
 
         return listaServicios;
+    }
+
+    public List<Cliente> cargarClientes(String clienteJson) {
+        List<Cliente> listaCliente = new ArrayList<>();
+        try {
+
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode jsonNode = objectMapper.readTree(new File(clienteJson));
+
+            JsonNode clientesNode = jsonNode.get("clientes");
+            if (clientesNode.isArray()) {
+                for (JsonNode carroNode : clientesNode) {
+                    String nombre = carroNode.get("nombre").asText();
+                    String cedula = carroNode.get("cedula").asText();
+
+                    Cliente cliente = new Cliente(nombre, cedula);
+                    listaCliente.add(cliente);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return listaCliente;
     }
 }

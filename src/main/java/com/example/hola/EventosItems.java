@@ -24,6 +24,7 @@ public class EventosItems {
     private final ObservableList<Servicio> serviciosObservables = FXCollections.observableArrayList();
     private final IntegradorFileSystem integration = new IntegradorFileSystem();
 
+    final private Constantes constantes =new Constantes();
     public Label lblServiciosDisponibles;
     public ComboBox cmbListaServicios;
     public Label lblPrecioPorPersona;
@@ -63,7 +64,7 @@ public class EventosItems {
     }
     private void loadServicios(IIntegracionFileSystem integrador) {
         cmbListaServicios.setItems(serviciosObservables);
-        serviciosObservables.setAll(integrador.cargarServicios("C:/Users/elice/ADS/ArchivosJson/servicios.json"));
+        serviciosObservables.setAll(integrador.cargarServicios(Constantes.SERVICIOSJSON));
 
     }
     public void mBtnAgregarServicio(ActionEvent event) throws IOException{
