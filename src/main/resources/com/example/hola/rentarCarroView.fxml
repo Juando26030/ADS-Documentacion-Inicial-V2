@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane prefHeight="276.0" prefWidth="466.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hola.EventosRentarCarro">
+<Pane prefHeight="204.0" prefWidth="262.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hola.EventosRentarCarro">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -15,6 +15,5 @@
       <Label fx:id="lblRentarCarro" layoutX="81.0" layoutY="15.0" text="RENTAR CARRO" />
       <Button fx:id="btnPagar" layoutX="137.0" layoutY="127.0" mnemonicParsing="false" onAction="#mBtnPagar" text="Ir a pagar" />
       <Button fx:id="btmRefresh" layoutX="179.0" layoutY="86.0" mnemonicParsing="false" onAction="#mBtnloadCarros" text="Refresh" />
-      <TextArea fx:id="txtareaoprueba" layoutX="246.0" layoutY="52.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </Pane>

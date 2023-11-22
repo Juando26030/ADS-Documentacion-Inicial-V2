@@ -28,7 +28,6 @@ import java.util.stream.IntStream;
 public class EventosRentarCarro {
     private final ObservableList<Carro> carrosObservables = FXCollections.observableArrayList();
     public Button btmRefresh;
-    public TextArea txtareaoprueba;
     private NegocioRentarCarro negocioRentarCarro;
     private final IntegradorFileSystem integration = new IntegradorFileSystem();
     public Label lblElejirCarro;
@@ -37,6 +36,9 @@ public class EventosRentarCarro {
     public Label lblRentarCarro;
     public Button btnPagar;
 
+    public EventosRentarCarro() {
+    }
+
     @FXML
     //protected void mBtnPagar() {
        // lblRentarCarro.setText("Rentó el carro...");
@@ -44,10 +46,8 @@ public class EventosRentarCarro {
 
 
     private void loadCarros(IIntegracionFileSystem integrador) {
-        List<Carro> array= integrador.cargarCarros("C:/Users/elice/ADS/ArchivosJson/carros.json");
         cmbBoxCarros.setItems(carrosObservables);
         carrosObservables.setAll(integrador.cargarCarros("C:/Users/elice/ADS/ArchivosJson/carros.json"));
-        IntStream.range(0, array.size()).forEach(i -> txtareaoprueba.setText(txtareaoprueba.getText() + array.get(i).toString()));
 
     }
     private Carro getCarroSeleccionado(){

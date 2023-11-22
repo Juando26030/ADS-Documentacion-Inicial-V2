@@ -3,35 +3,38 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane prefHeight="279.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hola.EventosItems">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <children>
-      <Label fx:id="lblServiciosDisponibles" layoutX="13.0" layoutY="47.0" text="Servicios disponibles:" />
-      <ComboBox fx:id="cmbListaServicios" layoutX="13.0" layoutY="72.0" prefWidth="150.0" />
-      <Label fx:id="lblPrecioPorPersona" layoutX="13.0" layoutY="104.0" text="Precio por persona:" />
-      <Button fx:id="btnAgregarServicio" layoutX="13.0" layoutY="221.0" mnemonicParsing="false" onAction="#mBtnAgregarServicio" text="Agregar" />
-      <Label fx:id="txtValorUnitario" layoutX="125.0" layoutY="104.0" prefHeight="17.0" prefWidth="47.0" />
-      <Label fx:id="lblCantPersonas" layoutX="13.0" layoutY="134.0" text="¿Cuantas personas van a tomar el servicio?" />
-      <TextField fx:id="txtFieldCantPersonas" layoutX="14.0" layoutY="151.0" />
-      <Label fx:id="lblPrecioTotal" layoutX="14.0" layoutY="191.0" text="Precio total:" />
-      <Label fx:id="txtPrecioTotal" layoutX="84.0" layoutY="191.0" prefHeight="17.0" prefWidth="63.0" />
-      <Button fx:id="btnVolverRenta" layoutX="134.0" layoutY="221.0" mnemonicParsing="false" onAction="#mBtnVolverRenta" text="Volver a la renta" />
-      <Label fx:id="lblElejirServicios" layoutX="79.0" layoutY="14.0" text="ELEJIR SERVICIOS" />
-      <Label fx:id="lblMisServicios" layoutX="391.0" layoutY="14.0" text="MIS SERVICIOS" />
-      <Label fx:id="lblServiciosContratados" layoutX="324.0" layoutY="47.0" text="Servicios contratados:" />
-      <ComboBox fx:id="cmbServiciosContratados" layoutX="324.0" layoutY="72.0" prefWidth="150.0" />
-      <Button fx:id="btnModificarServicio" layoutX="324.0" layoutY="139.0" mnemonicParsing="false" onAction="#mBtnModificarServicio" text="Modificar" />
-      <Button fx:id="btnEliminarServicio" layoutX="431.0" layoutY="139.0" mnemonicParsing="false" onAction="#mBtnEliminarServicio" text="Eliminar" />
-      <Label fx:id="lblCantPersonasXServicio" layoutX="324.0" layoutY="104.0" text="Cantidad de personas en este servicio:" />
-      <TextField fx:id="txtFieldCantXServicio" layoutX="531.0" layoutY="100.0" prefHeight="25.0" prefWidth="80.0" />
-      <Label fx:id="lblConsejo" layoutX="533.0" layoutY="72.0" prefHeight="38.0" prefWidth="80.0" text="Si quiere cambiar la cantidad de personas edite este valor" textAlignment="JUSTIFY" wrapText="true">
-         <font>
-            <Font size="6.0" />
-         </font></Label>
-   </children>
+<Pane prefHeight="314.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hola.EventosItems">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
 
+   <Label fx:id="lblServiciosDisponibles" layoutX="13.0" layoutY="68.0" text="Servicios disponibles:" />
+   <ComboBox fx:id="cmbListaServicios" layoutX="13.0" layoutY="93.0" prefWidth="150.0" />
+   <Label fx:id="lblPrecioPorPersona" layoutX="13.0" layoutY="125.0" text="Precio por persona:" />
+   <Button fx:id="btnAgregarServicio" layoutX="14.0" layoutY="205.0" mnemonicParsing="false" onAction="#mBtnAgregarServicio" text="Agregar" />
+   <Label fx:id="txtValorUnitario" layoutX="125.0" layoutY="104.0" prefHeight="17.0" prefWidth="47.0" />
+   <Label fx:id="lblCantPersonas" layoutX="13.0" layoutY="155.0" text="¿Cuantas personas van a tomar el servicio?" />
+   <TextField fx:id="txtFieldCantPersonas" layoutX="14.0" layoutY="172.0" />
+   <Label layoutX="274.0" layoutY="258.0" text="Precio total:" />
+   <Label fx:id="txtPrecioTotal" layoutX="84.0" layoutY="191.0" prefHeight="17.0" prefWidth="63.0" />
+   <Button fx:id="btnPagar" layoutX="528.0" layoutY="254.0" mnemonicParsing="false" onAction="#mBtnPagar" text="Pagar" />
+   <Label fx:id="lblElejirServicios" layoutX="79.0" layoutY="35.0" text="ELEJIR SERVICIOS" />
+   <Label fx:id="lblMisServicios" layoutX="391.0" layoutY="35.0" text="MIS SERVICIOS" />
+   <Label fx:id="lblServiciosContratados" layoutX="324.0" layoutY="68.0" text="Servicios contratados:" />
+   <ComboBox fx:id="cmbServiciosContratados" layoutX="324.0" layoutY="93.0" prefWidth="150.0" />
+   <Button fx:id="btnModificarServicio" layoutX="325.0" layoutY="205.0" mnemonicParsing="false" onAction="#mBtnModificarServicio" text="Modificar" />
+   <Button fx:id="btnEliminarServicio" layoutX="430.0" layoutY="205.0" mnemonicParsing="false" onAction="#mBtnEliminarServicio" text="Eliminar" />
+   <Label fx:id="lblCantPersonasXServicio" layoutX="327.0" layoutY="176.0" text="Cantidad de personas en este servicio:" />
+   <TextField fx:id="txtFieldCantXServicio" layoutX="534.0" layoutY="172.0" prefHeight="25.0" prefWidth="80.0" promptText="Cantidad" />
+   <Label fx:id="lblConsejo" layoutX="325.0" layoutY="123.0" prefHeight="38.0" prefWidth="257.0" text="Si quiere cambiar la cantidad de personas edite el siguiente valor" textAlignment="JUSTIFY" wrapText="true">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Label>
+   <Button fx:id="btnVolverRenta" layoutX="13.0" layoutY="10.0" mnemonicParsing="false" onAction="#mBtnVolverRenta" text="Atrás" />
+   <Line endX="414.79998779296875" layoutX="194.0" layoutY="243.0" startX="-179.0" />
+   <Label fx:id="lblPrecioTotal" layoutX="358.0" layoutY="258.0" prefHeight="17.0" prefWidth="63.0" />
 </Pane>
