@@ -1,0 +1,28 @@
+{
+    "clientes":[
+        {
+            "nombre":"Juan",
+            "cedula":"485731"
+        },
+        {
+            "nombre":"Laura",
+            "cedula":"325185"
+        },
+        {
+            "nombre":"Diego",
+            "cedula":"247395"
+        },
+        {
+            "nombre":"Valentina",
+            "cedula":"456487"
+        },
+        {
+            "nombre":"Sebastian",
+            "cedula":"904916"
+        },
+        {
+            "nombre":"Katherine",
+            "cedula":"367512"
+        }
+    ]
+}

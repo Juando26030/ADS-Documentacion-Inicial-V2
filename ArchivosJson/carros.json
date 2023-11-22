@@ -1,0 +1,30 @@
+{
+   "carros": [
+        {
+             "placa":"ABC123",
+            "valorRenta":"152300"
+        },
+        {
+            "placa":"DEF456",
+            "valorRenta":"120300"
+        },
+        {
+            "placa":"GHI789",
+            "valorRenta":"100500"
+        },
+        {
+            "placa":"JKL012",
+            "valorRenta":"145200"
+        },
+        {
+            "placa":"MNO345",
+            "valorRenta":"320000"
+        },
+        {
+            "placa":"PQR678",
+            "valorRenta":"90800"
+        }
+    ]
+   
+}
+

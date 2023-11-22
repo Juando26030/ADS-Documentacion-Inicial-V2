@@ -1,0 +1,28 @@
+{
+    "servicios":[
+        {
+            "nombre":"Alimentacion",
+            "precio":"40000"
+        },
+        {
+            "nombre":"Renta de peliculas",
+            "precio":"10000"
+        },
+        {
+            "nombre":"Juegos",
+            "precio":"15000"
+        },
+        {
+            "nombre":"Seguro de vida",
+            "precio":"20000"
+        },
+        {
+            "nombre":"Lavado",
+            "precio":"60000"
+        },
+        {
+            "nombre":"Gasolina",
+            "precio":"70000"
+        }
+    ]
+}
