@@ -1,6 +1,8 @@
 module com.example.hola {
     requires javafx.controls;
     requires javafx.fxml;
+    requires com.google.gson;
+    requires com.fasterxml.jackson.databind;
 
 
     opens com.example.hola to javafx.fxml;
