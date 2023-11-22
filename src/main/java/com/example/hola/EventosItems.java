@@ -1,6 +1,11 @@
 package com.example.hola;
 
-import com.example.hola.negocio.NegocioItems;
+
+import com.example.hola.dominio.Servicio;
+import com.example.hola.integracion.IIntegracionFileSystem;
+import com.example.hola.integracion.IntegradorFileSystem;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -16,7 +21,8 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class EventosItems {
-
+    private final ObservableList<Servicio> serviciosObservables = FXCollections.observableArrayList();
+    private final IntegradorFileSystem integration = new IntegradorFileSystem();
 
     public Label lblServiciosDisponibles;
     public ComboBox cmbListaServicios;
@@ -55,6 +61,11 @@ public class EventosItems {
         window.setScene(InicioScene);
         window.show();
     }
+    private void loadServicios(IIntegracionFileSystem integrador) {
+        cmbListaServicios.setItems(serviciosObservables);
+        serviciosObservables.setAll(integrador.cargarServicios("C:/Users/elice/ADS/ArchivosJson/servicios.json"));
+
+    }
     public void mBtnAgregarServicio(ActionEvent event) throws IOException{
         //Agregar item en mBtnAgregarServicio
     }
@@ -65,4 +76,7 @@ public class EventosItems {
         //Eliminar item en mBtnAgregarServicio
     }
 
+    public void mloadServicios(ActionEvent actionEvent) {
+        loadServicios(integration);
+    }
 }

@@ -19,7 +19,7 @@ public class IntegradorFileSystem implements IIntegracionFileSystem{
 
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-            JsonNode jsonNode = objectMapper.readTree(new File("C:/Users/elice/ADS/ArchivosJson/carros.json"));
+            JsonNode jsonNode = objectMapper.readTree(new File(carrosJson));
 
             JsonNode carrosNode = jsonNode.get("carros");
             if (carrosNode.isArray()) {
@@ -41,7 +41,26 @@ public class IntegradorFileSystem implements IIntegracionFileSystem{
 
     @Override
     public List<Servicio> cargarServicios(String serviciosJson) {
+        List<Servicio> listaServicios = new ArrayList<>();
 
-        return null;
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode jsonNode = objectMapper.readTree(new File(serviciosJson));
+
+            JsonNode carrosNode = jsonNode.get("servicios");
+            if (carrosNode.isArray()) {
+                for (JsonNode carroNode : carrosNode) {
+                    String nombre = carroNode.get("nombre").asText();
+                    int precio = carroNode.get("precio").asInt();
+
+                    Servicio servicio = new Servicio(nombre, precio);
+                    listaServicios.add(servicio);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return listaServicios;
     }
 }

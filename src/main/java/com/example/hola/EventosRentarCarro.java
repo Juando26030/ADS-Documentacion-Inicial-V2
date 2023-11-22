@@ -14,7 +14,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import javafx.collections.ObservableList;
 
@@ -45,14 +44,7 @@ public class EventosRentarCarro {
    // }
 
 
-    private void loadCarros(IIntegracionFileSystem integrador) {
-        cmbBoxCarros.setItems(carrosObservables);
-        carrosObservables.setAll(integrador.cargarCarros("C:/Users/elice/ADS/ArchivosJson/carros.json"));
 
-    }
-    private Carro getCarroSeleccionado(){
-        return (Carro) this.cmbBoxCarros.getValue();
-    }
     public void mBtnServicios(ActionEvent event) throws IOException
     {
         Parent InicioParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("itemsView.fxml")));
@@ -68,6 +60,15 @@ public class EventosRentarCarro {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(InicioScene);
         window.show();
+    }
+
+    private void loadCarros(IIntegracionFileSystem integrador) {
+        cmbBoxCarros.setItems(carrosObservables);
+        carrosObservables.setAll(integrador.cargarCarros("C:/Users/elice/ADS/ArchivosJson/carros.json"));
+
+    }
+    private Carro getCarroSeleccionado(){
+        return (Carro) this.cmbBoxCarros.getValue();
     }
 
 

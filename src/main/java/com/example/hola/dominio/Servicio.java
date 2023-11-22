@@ -2,9 +2,9 @@ package com.example.hola.dominio;
 
 public class Servicio {
     private String nombre;
-    private Float precio;
+    private Integer precio;
 
-    public Servicio(String nombre, Float precio) {
+    public Servicio(String nombre, Integer precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
@@ -20,19 +20,17 @@ public class Servicio {
         this.nombre = nombre;
     }
 
-    public Float getPrecio() {
+    public Integer getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Float precio) {
+    public void setPrecio(Integer precio) {
         this.precio = precio;
     }
 
     @Override
     public String toString() {
-        return "Servicio{" +
-                "nombre='" + nombre + '\'' +
-                ", precio=" + precio +
-                '}';
+        return nombre +
+                ", precio: " + precio ;
     }
 }

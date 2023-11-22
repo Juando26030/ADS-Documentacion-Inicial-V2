@@ -15,7 +15,6 @@
    <ComboBox fx:id="cmbListaServicios" layoutX="13.0" layoutY="93.0" prefWidth="150.0" />
    <Label fx:id="lblPrecioPorPersona" layoutX="13.0" layoutY="125.0" text="Precio por persona:" />
    <Button fx:id="btnAgregarServicio" layoutX="14.0" layoutY="205.0" mnemonicParsing="false" onAction="#mBtnAgregarServicio" text="Agregar" />
-   <Label fx:id="txtValorUnitario" layoutX="125.0" layoutY="104.0" prefHeight="17.0" prefWidth="47.0" />
    <Label fx:id="lblCantPersonas" layoutX="13.0" layoutY="155.0" text="¿Cuantas personas van a tomar el servicio?" />
    <TextField fx:id="txtFieldCantPersonas" layoutX="14.0" layoutY="172.0" />
    <Label layoutX="274.0" layoutY="258.0" text="Precio total:" />
@@ -37,4 +36,5 @@
    <Button fx:id="btnVolverRenta" layoutX="13.0" layoutY="10.0" mnemonicParsing="false" onAction="#mBtnVolverRenta" text="Atrás" />
    <Line endX="414.79998779296875" layoutX="194.0" layoutY="243.0" startX="-179.0" />
    <Label fx:id="lblPrecioTotal" layoutX="358.0" layoutY="258.0" prefHeight="17.0" prefWidth="63.0" />
+   <Button fx:id="btnRefresh" layoutX="554.0" layoutY="10.0" mnemonicParsing="false" onAction="#mloadServicios" text="Refresh" />
 </Pane>
