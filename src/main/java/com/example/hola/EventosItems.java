@@ -117,7 +117,16 @@ public class EventosItems {
 
     }
     public void mBtnModificarServicio(ActionEvent event) throws IOException{
-        //Modificar item en mBtnAgregarServicio
+        int cantidadPasajeros = Integer.parseInt(txtFieldCantXServicio.getText());
+        Item nuevoItem = (Item) cmbServiciosContratados.getValue();
+        for (Item item :vars.getRenta().getItems()) {
+            if(item.equals(nuevoItem)){
+                item.setPasajeros(cantidadPasajeros);
+                txtFieldCantXServicio.clear();
+                cmbServiciosContratados.getSelectionModel().clearSelection();
+                break;
+            }
+        }
     }
     public void mBtnEliminarServicio(ActionEvent event) throws IOException{
         //Eliminar item en mBtnAgregarServicio
