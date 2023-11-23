@@ -129,7 +129,15 @@ public class EventosItems {
         }
     }
     public void mBtnEliminarServicio(ActionEvent event) throws IOException{
-        //Eliminar item en mBtnAgregarServicio
+        Item nuevoItem = (Item) cmbServiciosContratados.getValue();
+        for (Item item :vars.getRenta().getItems()) {
+            if(item.equals(nuevoItem)){
+                vars.getRenta().getItems().remove(item);
+                txtFieldCantXServicio.clear();
+                cmbServiciosContratados.getSelectionModel().clearSelection();
+                break;
+            }
+        }
     }
 
     public void mloadServicios(ActionEvent actionEvent) {
