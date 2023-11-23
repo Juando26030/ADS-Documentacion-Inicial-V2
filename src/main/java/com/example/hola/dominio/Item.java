@@ -1,5 +1,7 @@
 package com.example.hola.dominio;
 
+import java.util.Objects;
+
 public class Item {
     private Integer pasajeros;
     private Servicio servicio;
@@ -34,5 +36,14 @@ public class Item {
                 "pasajeros=" + pasajeros +
                 ", servicio=" + servicio +
                 '}';
+    }
+
+
+    public boolean equals(Item item) {
+        if(Objects.equals(this.getServicio().getNombre(), item.getServicio().getNombre())){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

@@ -58,7 +58,6 @@ public class EventosRentarCarro  {
             StackPane stackPane = new StackPane();
             stackPane.setAlignment(Pos.CENTER);
             stackPane.getChildren().add(new Label("Carro no seleccionado"));
-
             Scene popupScene = new Scene(stackPane, 250, 150);
             popupStage.setScene(popupScene);
             popupStage.setTitle("Error");
