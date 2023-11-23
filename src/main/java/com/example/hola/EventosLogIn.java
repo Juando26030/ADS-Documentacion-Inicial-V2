@@ -2,6 +2,7 @@ package com.example.hola;
 
 import com.example.hola.dominio.Cliente;
 import com.example.hola.negocio.NegocioLogIn;
+import com.example.hola.negocio.NegocioRentarCarro;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -23,6 +24,8 @@ public class EventosLogIn {
 
     public Button btnCargarClientes;
     private final NegocioLogIn negocioLogIn = new NegocioLogIn();
+
+
     public Label lblIngreseUsuario;
     public Button btnLogIn;
     public Label lblUsuario;
@@ -31,8 +34,11 @@ public class EventosLogIn {
 
     public void mBtnLogIn(ActionEvent event) throws IOException
     {
+        Variables vars;
         Cliente cliente =negocioLogIn.clienteActual(txtFieldUsuario.getText());
         if(!Objects.equals(cliente.getNombre(), "")){
+            vars = Variables.getInstance();
+            vars.getRenta().setCliente(cliente);
             Parent InicioParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("rentarCarroView.fxml")));
             Scene InicioScene = new Scene(InicioParent);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

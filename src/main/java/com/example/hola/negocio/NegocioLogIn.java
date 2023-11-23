@@ -10,8 +10,15 @@ import java.util.Objects;
 
 public class NegocioLogIn implements INegocioLogIn{
 
+    private NegocioRentarCarro negocioRentarCarro=new NegocioRentarCarro();
 
     private List<Cliente> clientes= new ArrayList<>();
+    private Cliente clienteact= new Cliente();
+
+    public Cliente getClienteact() {
+        return clienteact;
+    }
+
     private final IntegradorFileSystem integrador=new IntegradorFileSystem();
     public void cargarClientes (){
         clientes=integrador.cargarClientes(Constantes.CLIENTESJSON);
@@ -21,6 +28,7 @@ public class NegocioLogIn implements INegocioLogIn{
         Cliente vacio =new Cliente("","0000");
         for(Cliente cliente:clientes) {
             if (Objects.equals(cliente.getNombre(), nombre)) {
+                negocioRentarCarro.actualizarClienteRenta(cliente);
                 return cliente;
             }
         }

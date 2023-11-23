@@ -1,20 +1,26 @@
 package com.example.hola.dominio;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Renta {
-    private Date fecha;
+    private LocalDate fecha;
     private Carro carro;
     private Cliente cliente;
     private Pago pago;
     private ArrayList<Item> items;
 
-    public Date getFecha() {
+    public Renta(LocalDate fecha, Cliente cliente) {
+        this.fecha = fecha;
+        this.cliente = cliente;
+    }
+
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
@@ -61,7 +67,7 @@ public class Renta {
                 '}';
     }
 
-    public Renta(Date fecha, Carro carro, Cliente cliente, Pago pago, ArrayList<Item> items) {
+    public Renta(LocalDate fecha, Carro carro, Cliente cliente, Pago pago, ArrayList<Item> items) {
         this.fecha = fecha;
         this.carro = carro;
         this.cliente = cliente;
