@@ -56,6 +56,8 @@ public class EventosItems {
 
     public void mBtnVolverRenta(ActionEvent event) throws IOException
     {
+        Variables vars = Variables.getInstance();
+        vars.getRenta().getItems().clear();
         Parent InicioParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("rentarCarroView.fxml")));
         Scene InicioScene = new Scene(InicioParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -98,6 +100,7 @@ public class EventosItems {
         }
         if(bandera){
             vars.getRenta().getItems().add(nuevoItem);
+            actualizartotal();
         }else{
             Stage popupStage = new Stage();
             popupStage.initStyle(StageStyle.UTILITY);
@@ -124,6 +127,7 @@ public class EventosItems {
                 item.setPasajeros(cantidadPasajeros);
                 txtFieldCantXServicio.clear();
                 cmbServiciosContratados.getSelectionModel().clearSelection();
+                actualizartotal();
                 break;
             }
         }
@@ -135,6 +139,7 @@ public class EventosItems {
                 vars.getRenta().getItems().remove(item);
                 txtFieldCantXServicio.clear();
                 cmbServiciosContratados.getSelectionModel().clearSelection();
+                actualizartotal();
                 break;
             }
         }
@@ -143,4 +148,14 @@ public class EventosItems {
     public void mloadServicios(ActionEvent actionEvent) {
         loadServicios(integration);
     }
+
+    private void actualizartotal(){
+        Integer total=0;
+        for (Item item :vars.getRenta().getItems()) {
+            total+=item.getServicio().getPrecio()*item.getPasajeros();
+        }
+        lblPrecioTotal.setText(total.toString());
+    }
+
+
 }

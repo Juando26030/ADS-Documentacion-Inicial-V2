@@ -11,30 +11,34 @@
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
 
-   <Label fx:id="lblServiciosDisponibles" layoutX="13.0" layoutY="68.0" text="Servicios disponibles:" />
-   <ComboBox fx:id="cmbListaServicios" layoutX="13.0" layoutY="93.0" prefWidth="150.0" />
-   <Label fx:id="lblPrecioPorPersona" layoutX="13.0" layoutY="125.0" text="Precio por persona:" />
-   <Button fx:id="btnAgregarServicio" layoutX="14.0" layoutY="205.0" mnemonicParsing="false" onAction="#mBtnAgregarServicio" text="Agregar" />
-   <Label fx:id="lblCantPersonas" layoutX="13.0" layoutY="155.0" text="¿Cuantas personas van a tomar el servicio?" />
-   <TextField fx:id="txtFieldCantPersonas" layoutX="14.0" layoutY="172.0" />
-   <Label layoutX="274.0" layoutY="258.0" text="Precio total:" />
+   <Label fx:id="lblServiciosDisponibles" layoutX="12.0" layoutY="89.0" text="Servicios disponibles:" />
+   <ComboBox fx:id="cmbListaServicios" layoutX="12.0" layoutY="114.0" prefWidth="150.0" />
+   <Label fx:id="lblPrecioPorPersona" layoutX="12.0" layoutY="146.0" text="Precio por persona:" />
+   <Button fx:id="btnAgregarServicio" layoutX="13.0" layoutY="226.0" mnemonicParsing="false" onAction="#mBtnAgregarServicio" text="Agregar" />
+   <Label fx:id="lblCantPersonas" layoutX="12.0" layoutY="176.0" text="¿Cuantas personas van a tomar el servicio?" />
+   <TextField fx:id="txtFieldCantPersonas" layoutX="13.0" layoutY="193.0" />
+   <Label layoutX="273.0" layoutY="279.0" text="Precio total:" />
    <Label fx:id="txtPrecioTotal" layoutX="84.0" layoutY="191.0" prefHeight="17.0" prefWidth="63.0" />
-   <Button fx:id="btnPagar" layoutX="528.0" layoutY="254.0" mnemonicParsing="false" onAction="#mBtnPagar" text="Pagar" />
-   <Label fx:id="lblElejirServicios" layoutX="79.0" layoutY="35.0" text="ELEJIR SERVICIOS" />
-   <Label fx:id="lblMisServicios" layoutX="391.0" layoutY="35.0" text="MIS SERVICIOS" />
-   <Label fx:id="lblServiciosContratados" layoutX="324.0" layoutY="68.0" text="Servicios contratados:" />
-   <ComboBox fx:id="cmbServiciosContratados" layoutX="324.0" layoutY="93.0" prefWidth="150.0" />
-   <Button fx:id="btnModificarServicio" layoutX="325.0" layoutY="205.0" mnemonicParsing="false" onAction="#mBtnModificarServicio" text="Modificar" />
-   <Button fx:id="btnEliminarServicio" layoutX="430.0" layoutY="205.0" mnemonicParsing="false" onAction="#mBtnEliminarServicio" text="Eliminar" />
-   <Label fx:id="lblCantPersonasXServicio" layoutX="327.0" layoutY="176.0" text="Cantidad de personas en este servicio:" />
-   <TextField fx:id="txtFieldCantXServicio" layoutX="534.0" layoutY="172.0" prefHeight="25.0" prefWidth="80.0" promptText="Cantidad" />
-   <Label fx:id="lblConsejo" layoutX="325.0" layoutY="123.0" prefHeight="38.0" prefWidth="257.0" text="Si quiere cambiar la cantidad de personas edite el siguiente valor" textAlignment="JUSTIFY" wrapText="true">
+   <Button fx:id="btnPagar" layoutX="527.0" layoutY="275.0" mnemonicParsing="false" onAction="#mBtnPagar" text="Pagar" />
+   <Label fx:id="lblElejirServicios" layoutX="78.0" layoutY="56.0" text="ELEJIR SERVICIOS" />
+   <Label fx:id="lblMisServicios" layoutX="390.0" layoutY="56.0" text="MIS SERVICIOS" />
+   <Label fx:id="lblServiciosContratados" layoutX="323.0" layoutY="89.0" text="Servicios contratados:" />
+   <ComboBox fx:id="cmbServiciosContratados" layoutX="323.0" layoutY="114.0" prefWidth="150.0" />
+   <Button fx:id="btnModificarServicio" layoutX="324.0" layoutY="226.0" mnemonicParsing="false" onAction="#mBtnModificarServicio" text="Modificar" />
+   <Button fx:id="btnEliminarServicio" layoutX="429.0" layoutY="226.0" mnemonicParsing="false" onAction="#mBtnEliminarServicio" text="Eliminar" />
+   <Label fx:id="lblCantPersonasXServicio" layoutX="326.0" layoutY="197.0" text="Cantidad de personas en este servicio:" />
+   <TextField fx:id="txtFieldCantXServicio" layoutX="533.0" layoutY="193.0" prefHeight="25.0" prefWidth="80.0" promptText="Cantidad" />
+   <Label fx:id="lblConsejo" layoutX="324.0" layoutY="144.0" prefHeight="38.0" prefWidth="257.0" text="Si quiere cambiar la cantidad de personas edite el siguiente valor" textAlignment="JUSTIFY" wrapText="true">
       <font>
          <Font size="10.0" />
       </font>
    </Label>
-   <Button fx:id="btnVolverRenta" layoutX="13.0" layoutY="10.0" mnemonicParsing="false" onAction="#mBtnVolverRenta" text="Atrás" />
-   <Line endX="414.79998779296875" layoutX="194.0" layoutY="243.0" startX="-179.0" />
-   <Label fx:id="lblPrecioTotal" layoutX="358.0" layoutY="258.0" prefHeight="17.0" prefWidth="63.0" />
-   <Button fx:id="btnRefresh" layoutX="554.0" layoutY="10.0" mnemonicParsing="false" onAction="#mloadServicios" text="Refresh" />
+   <Button fx:id="btnVolverRenta" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#mBtnVolverRenta" text="Atrás" />
+   <Line endX="414.79998779296875" layoutX="193.0" layoutY="264.0" startX="-179.0" />
+   <Label fx:id="lblPrecioTotal" layoutX="359.0" layoutY="279.0" prefHeight="17.0" prefWidth="63.0" />
+   <Button fx:id="btnRefresh" layoutX="553.0" layoutY="21.0" mnemonicParsing="false" onAction="#mloadServicios" text="Refresh" />
+   <Label layoutX="73.0" layoutY="14.0" prefHeight="38.0" prefWidth="218.0" text="Si presiona atrás perderá los datos de esta renta" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+      <font>
+         <Font name="System Italic" size="9.0" />
+      </font></Label>
 </Pane>
